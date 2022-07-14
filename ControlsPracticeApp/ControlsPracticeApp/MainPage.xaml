@@ -58,11 +58,34 @@
                          Value="red"
                          CheckedChanged="ColorRadioButton_CheckedChanged"/>
 
-
-
         </StackLayout>
-        
-        
+
+        <StackLayout Grid.ColumnSpan="2" Grid.Row="2"
+                     VerticalOptions="Center"
+                     Padding="20,20,20,10">
+            <SwipeView>
+                <SwipeView.RightItems>
+                    <SwipeItems>
+                        <SwipeItem Text="Delete"
+                                   BackgroundColor="Red"
+                                   IconImageSource="delete.png"
+                                   Invoked="SwipeItem_Invoked_Delete" />
+                        <SwipeItem Text="Edit"
+                                   BackgroundColor="Green"
+                                   IconImageSource="edit.png"
+                                   Invoked="SwipeItem_Invoked_Edit" />
+                    </SwipeItems>
+                </SwipeView.RightItems>
+                <StackLayout>
+                    <Button x:Name="btn_swipe"
+                        Text="Swipe Me Right!"
+                            />
+                </StackLayout>
+            </SwipeView>
+            
+        </StackLayout>
+
+
     </Grid>
 
 </ContentPage>

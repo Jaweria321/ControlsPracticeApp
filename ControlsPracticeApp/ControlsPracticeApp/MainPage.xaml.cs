@@ -48,5 +48,17 @@ namespace ControlsPracticeApp
 
    
         }
+       
+
+        private void SwipeItem_Invoked_Edit(object sender, EventArgs e)
+        {
+
+            DisplayAlert("Edit", "Edit Item?", "ok");
+        }
+
+        private void SwipeItem_Invoked_Delete(object sender, EventArgs e)
+        {
+            DisplayAlert("Delete", "Delete Item?", "ok");
+        }
     }
 }

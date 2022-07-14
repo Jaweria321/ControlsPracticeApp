@@ -3,14 +3,66 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ControlsPracticeApp.MainPage">
 
-    <StackLayout Orientation="Horizontal"
-                 
-               HorizontalOptions="Center">
-        <Label Text="Just a Label"/>
-        <Label Text="2nd label"/>
-        <Slider Minimum="0"
-                Maximum="100" />
+    <Grid x:Name="MainView">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackLayout Grid.Column="0" Grid.Row="0"
+                     VerticalOptions="Center"
+                     Padding="20,20,20,10">
+            <Label x:Name="SliderLabel" 
+                   Text="0"
+                   FontSize="Large"
+                   TextColor="White"/>
+            <Slider x:Name="Slider"
+                Minimum="0"
+                Maximum="100" 
+                ValueChanged="Slider_ValueChanged" />
+        </StackLayout>
+        <StackLayout Grid.Column="1" Grid.Row="0"
+                     VerticalOptions="Center"
+                     Padding="20,20,20,10">
+            <Label Text="Box View"
+                   FontSize="Large"
+                   TextColor="White"/>
+            <BoxView Color="Aquamarine"
+                     WidthRequest="150"
+                     HeightRequest="80"
+                     HorizontalOptions="Center" />
+
+        </StackLayout>
+        <StackLayout Grid.Column="0" Grid.Row="1"
+                     VerticalOptions="Center"
+                     Padding="20,20,20,10">
+            <Label Text="Change Background Color"
+                   FontSize="Medium"
+                   TextDecorations="Underline"
+                   TextColor="White"/>
+            <RadioButton Content="Black"
+                         Value="black"
+                         IsChecked="True" 
+                         GroupName="color"
+                          CheckedChanged="ColorRadioButton_CheckedChanged"/>
+            <RadioButton Content="Gray"
+                         GroupName="color"
+                         Value="gray" 
+                         CheckedChanged="ColorRadioButton_CheckedChanged" />
+            <RadioButton Content="Red"
+                         GroupName="color"
+                         Value="red"
+                         CheckedChanged="ColorRadioButton_CheckedChanged"/>
+
+
+
+        </StackLayout>
         
-    </StackLayout>
+        
+    </Grid>
 
 </ContentPage>

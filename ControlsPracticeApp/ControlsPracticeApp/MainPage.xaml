@@ -8,6 +8,8 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -78,13 +80,36 @@
                 </SwipeView.RightItems>
                 <StackLayout>
                     <Button x:Name="btn_swipe"
-                        Text="Swipe Me Right!"
+                        Text="Swipe Me Left!"
                             />
                 </StackLayout>
             </SwipeView>
             
         </StackLayout>
+        <StackLayout Grid.Column="0" Grid.Row="3"
+                     VerticalOptions="Center"
+                     Padding="20,20,20,10">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
 
+                <Label x:Name="lblcheckbox_1" 
+                   Text="Xaml"
+                   FontSize="Medium"
+                   TextColor="White"
+                   Grid.Row="0" Grid.Column="0" />
+                <CheckBox  Grid.Row="0" Grid.Column="1" CheckedChanged="CheckBox_CheckedChanged" />
+
+            </Grid>
+            <Label x:Name="lblcheckbox_3" />
+           
+
+        </StackLayout>
 
     </Grid>
 

@@ -42,11 +42,6 @@ namespace ControlsPracticeApp
             {
                 MainView.BackgroundColor = Color.Gray;
             }
-
-            
-                    
-
-   
         }
        
 
@@ -59,6 +54,18 @@ namespace ControlsPracticeApp
         private void SwipeItem_Invoked_Delete(object sender, EventArgs e)
         {
             DisplayAlert("Delete", "Delete Item?", "ok");
+        }
+
+        private void CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        {
+            if(e.Value == true)
+            {
+                lblcheckbox_3.Text = "Skill Added";
+            }
+            else
+            {
+                lblcheckbox_3.Text = "Add New skill";
+            }
         }
     }
 }

@@ -10,6 +10,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -110,13 +111,21 @@
            
 
         </StackLayout>
-        <StackLayout Grid.ColumnSpan="2" Grid.Row="4"
+        <StackLayout Grid.Row="4" Grid.ColumnSpan="2" Grid.RowSpan="2"
                      VerticalOptions="Center"
                      Padding="20,20,20,10">
             <Label Text="Scrollable ListView"
                    TextColor="White"
                    FontSize="Medium"></Label>
-            <ListView x:Name="MyListView" SeparatorColor="Aqua"></ListView>
+            <ListView x:Name="MyListView" SeparatorColor="Aqua">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell Text="{Binding Name}"
+                                  Detail="{Binding Status}"
+                                  ImageSource="{Binding ImageUrl}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
           
         </StackLayout>
     </Grid>

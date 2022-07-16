@@ -1,10 +1,12 @@
-﻿using System;
+﻿using ControlsPracticeApp.DataModel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+
 
 namespace ControlsPracticeApp
 {
@@ -13,13 +15,13 @@ namespace ControlsPracticeApp
         public MainPage()
         {
             InitializeComponent();
-            List<string> myList = new List<string>()
+            List<StudentInfo> myList = new List<StudentInfo>()
             {
-                "Item 1",
-                "Item 2",
-                "Item 3",
-                "Item 4",
-                "Item 5"
+                new StudentInfo{Name= "Goku", Status="Enrolled", ImageUrl= "https://tinyurl.com/cdj6xfz8" },
+                new StudentInfo{Name= "Luffy", Status="Enrolled", ImageUrl= "https://tinyurl.com/keu6mjvt" },
+                new StudentInfo{Name= "Saitama", Status="Enrolled", ImageUrl= "https://tinyurl.com/5bxv6vzz" },
+                new StudentInfo{Name= "Zoro", Status="Enrolled", ImageUrl= "https://tinyurl.com/mwtysesj" },
+                new StudentInfo{Name= "Hisoka", Status="Enrolled", ImageUrl= "https://tinyurl.com/tmtn5fww" },
 
             };
             MyListView.ItemsSource = myList;
